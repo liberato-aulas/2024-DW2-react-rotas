@@ -1,12 +1,10 @@
-import { Menu } from '../../components/Menu/Menu'
-import styles from './Sobre.module.css'
 
 export function Sobre() {
 
     return (
-        <div className={styles.Sobre}>
-            <Menu />
-            <h1>Sobre</h1>
+        <div className="flex">
+       
+            <h1 className="font-bold text-4xl">Sobre</h1>
         </div>
     )
 }

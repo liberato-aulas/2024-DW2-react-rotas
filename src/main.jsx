@@ -7,7 +7,8 @@ import { Home } from "./pages/Home/Home"
 import { Contato } from "./pages/Contato/Contato"
 import { Sobre } from "./pages/Sobre/Sobre"
 import { Pagina404 } from "./pages/Pagina404/Pagina404"
-import { Teste } from './components/teste'
+import { Layout } from './pages/Layout'
+
 
 
 // const rotas = createBrowserRouter([
@@ -19,7 +20,7 @@ import { Teste } from './components/teste'
 // ])
 
 const rotas = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<Teste />}> 
+  <Route path='/'element={<Layout />} > 
     <Route index element={<Home/>} />
     <Route path='home' element={<Home/>} />
     <Route path='contato' element={<Contato/>} />
@@ -31,6 +32,7 @@ const rotas = createBrowserRouter(createRoutesFromElements(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+
     <RouterProvider router={rotas} />
 
   </StrictMode>,

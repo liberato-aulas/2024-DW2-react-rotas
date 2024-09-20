@@ -1,13 +1,21 @@
-import { IconAddressBook, IconHome, IconInfoCircle, IconRouteAltLeft } from "@tabler/icons-react";
+import {
+  IconAddressBook,
+  IconBrandReact,
+  IconHome,
+  IconInfoCircle,
+  IconRouteAltLeft,
+  IconSquareRoundedNumber1,
+} from "@tabler/icons-react";
 import { NavLink } from "react-router-dom";
 
 export function Menu() {
- 
   const getEstilo = (props) => {
-   
-    let estilo =
-      "flex gap-3 text-zinc-50 px-3 py-4 hover:bg-slate-800 hover:text-slate-200 ";
-    let ativo = "border-r-4 border-solid border-slate-800 "
+    let estilo = `
+      flex items-center gap-4
+      px-3 py-3 w-full
+      text-sm text-white 
+      hover:bg-zinc-900 `;
+    let ativo = "border-r-4 border-solid border-slate-800 ";
 
     // let final
     // if (props.isActive){
@@ -15,19 +23,31 @@ export function Menu() {
     // } else {
     //     final = estilo
     // }
-    let final = props.isActive ? estilo + ativo : estilo
+    let final = props.isActive ? estilo + ativo : estilo;
 
     return final;
   };
 
   return (
-    <aside className="bg-black text-zinc-50 w-60 h-screen">
-      <header className="bg-zinc-800 text-zinc-50 flex gap-1 justify-center items-center px-1 py-5 border-b-2 border-solid border-slate-200 ">
+    <aside className="flex flex-col gap-5 bg-black min-w-72">
+      <header
+        className={`
+          flex justify-center items-center gap-2
+          bg-black text-zinc-50 
+          px-1 py-5 h-16          
+          text-2xl font-black
+        `}
+      >
+        <IconBrandReact />
         <span className="font-bold">React Rotas</span>
-        <IconRouteAltLeft />
       </header>
 
-      <nav className="flex flex-col">
+      <nav
+        className={`
+          flex flex-col justify-start items-start gap-2    
+               
+        `}
+      >
         <NavLink to="home" className={getEstilo}>
           <IconHome />
           Home
@@ -41,8 +61,10 @@ export function Menu() {
           Sobre
         </NavLink>
 
+        <span className="pt-4 pl-3 text-xs text-zinc-500">Estado</span>
+
         <NavLink to="estado1" className={getEstilo}>
-          <IconInfoCircle />
+          <IconSquareRoundedNumber1 />
           Estado 1
         </NavLink>
       </nav>

@@ -13,7 +13,10 @@ import { Contato } from "./pages/Contato";
 import { Sobre } from "./pages/Sobre";
 import { Pagina404 } from "./pages/Pagina404";
 import { Layout } from "./pages/_Layout";
-import { Estado1 } from "./pages/Estado1";
+import { SemEstado } from "./pages/estado/SemEstado";
+import { ComEstado } from "./pages/estado/ComEstado";
+import { CampoTexto } from "./pages/estado/CampoTexto";
+import { Contador } from "./pages/estado/Contador";
 
 // const rotas = createBrowserRouter([
 //   {path:"/", element: <Home/>},
@@ -30,7 +33,10 @@ const rotas = createBrowserRouter(
       <Route path="home" element={<Home />} />
       <Route path="contato" element={<Contato />} />
       <Route path="sobre" element={<Sobre />} />
-      <Route path="estado1" element={<Estado1 />} />
+      <Route path="semEstado" element={<SemEstado/>} />
+      <Route path="comEstado" element={<ComEstado/>} />
+      <Route path="campoTexto" element={<CampoTexto/>} />
+      <Route path="contador" element={<Contador/>} />
       <Route path="*" element={<Pagina404 />} />
     </Route>
   )

@@ -3,6 +3,8 @@ import {
   IconBrandReact,
   IconHome,
   IconInfoCircle,
+  IconMessageDown,
+  IconMessageUp,
   IconRouteAltLeft,
   IconSquareRoundedNumber1,
   IconSquareRoundedNumber2,
@@ -14,8 +16,8 @@ import { NavLink } from "react-router-dom";
 export function Menu() {
   const getEstilo = (props) => {
     let estilo = `
-      flex items-center gap-4
-      px-3 py-3 w-full
+      flex items-center gap-3
+      px-3 py-2 w-full
       text-sm text-white 
       hover:bg-zinc-900 `;
     let ativo = "border-r-4 border-solid border-slate-800 ";
@@ -84,6 +86,18 @@ export function Menu() {
         <NavLink to="contador" className={getEstilo}>
           <IconSquareRoundedNumber4 />
           Contador
+        </NavLink>
+        
+        <span className="pt-4 pl-3 text-xs text-zinc-500">Comunicação</span>
+
+        <NavLink to="comunicacao-direta" className={getEstilo}>
+          <IconMessageDown />
+          Comunicação Direta
+        </NavLink>
+        
+        <NavLink to="comunicacao-indireta" className={getEstilo}>
+          <IconMessageUp />
+          Comunicação Indireta
         </NavLink>
 
       </nav>

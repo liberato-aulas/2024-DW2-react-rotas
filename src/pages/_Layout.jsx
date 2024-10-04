@@ -6,7 +6,7 @@ export function Layout() {
     <div
       className={`
         flex 
-        w-screen h-screen       
+        w-screen min-h-screen       
     `}
     >
       <Menu />

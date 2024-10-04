@@ -87,24 +87,30 @@ export function Menu() {
           <IconSquareRoundedNumber4 />
           Contador
         </NavLink>
-        
+
         <span className="pt-4 pl-3 text-xs text-zinc-500">Comunicação</span>
 
         <NavLink to="comunicacao-direta" className={getEstilo}>
           <IconMessageDown />
           Comunicação Direta
         </NavLink>
-        
+
         <NavLink to="comunicacao-indireta" className={getEstilo}>
           <IconMessageUp />
           Comunicação Indireta
         </NavLink>
 
-      </nav>
+        <span className="pt-4 pl-3 text-xs text-zinc-500">Hooks Básicos</span>
+        <NavLink to="useRef" className={getEstilo}>
+          <IconMessageUp />
+          UseRef
+        </NavLink>
 
-      <footer className="absolute bottom-0 p-2 flex justify-center">
-        <span>Desenvolvimento Web 2</span>
-      </footer>
+        <NavLink to="useEffect" className={getEstilo}>
+          <IconMessageUp />
+          UseEffect
+        </NavLink>
+      </nav>
     </aside>
   );
 }
